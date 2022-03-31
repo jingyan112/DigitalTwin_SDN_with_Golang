@@ -18,8 +18,8 @@ import (
 
 const OnosImageName = "registry.hub.docker.com/onosproject/onos"
 const OnosContainerName = "onos"
-const OnosFwdAppName = "org.onosproject.fwd"
-const OnosOpenflowName = "org.onosproject.openflow"
+
+var onosAppsList = []string{"org.onosproject.fwd", "org.onosproject.openflow"}
 
 const MininetImageName = "registry.hub.docker.com/iwaseyusuke/mininet"
 const MininetContainerName = "mininet"
@@ -177,7 +177,6 @@ func main() {
 
 	time.Sleep(30 * time.Second)
 
-	onosAppsList := []string{OnosFwdAppName, OnosOpenflowName}
 	for _, appName := range onosAppsList {
 		ActivateOnosApp(appName)
 	}
