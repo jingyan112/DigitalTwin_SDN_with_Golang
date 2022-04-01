@@ -3,13 +3,8 @@ Re-write the previous digital twin with SDN project with Golang
 
 Golang env setup
 - go mod init main
-- Write basic code in main.go
 - go mod tidy
-- Create generate_file4topo_create/generate_file4topo_create.go
-- Create activate_onos_app/activate_onos_app.go
-- In generate_file4topo_create dir, execute "go install -v ."
-- In activate_onos_app dir, execute "go intall -v ."
-- In main.go, call the functions in generate_file4topo_create.go and activate_onos_app.go
+- go run main.go
 
 What does the code implement?
 - Pull "mininet" and "onos" docker image from dockerhub
